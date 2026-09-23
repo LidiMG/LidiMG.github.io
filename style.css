@@ -1,0 +1,269 @@
+/* ==========================================================
+   Portfólio — Lidiane M. Gomes
+   Conceito: fichário de biblioteca. Cada projeto é uma ficha
+   catalográfica; o resto da página fica quieto ao redor delas.
+   ========================================================== */
+
+:root {
+  --page: #E3E8E4;        /* papel verde-acinzentado do fichário */
+  --ink: #1C2A38;         /* tinta azul-marinho */
+  --muted: #4E5C69;
+  --link: #1D4F8A;
+  --card: #FFFEF7;        /* cartolina da ficha */
+  --card-ink: #22262B;
+  --rule-red: #B0272B;    /* linha vermelha do topo da ficha */
+  --rule-blue: #B7CBE2;   /* pauta azul */
+  --line: #C4CDC8;
+
+  --serif: "Literata", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --typed: "Courier Prime", "Courier New", Courier, monospace;
+
+  --measure: 68ch;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page: #15202A;
+    --ink: #E4E9EE;
+    --muted: #A6B2BE;
+    --link: #93BCEB;
+    --line: #2E3C49;
+    /* a ficha continua clara: é um objeto físico */
+  }
+}
+:root[data-theme="dark"] {
+  --page: #15202A; --ink: #E4E9EE; --muted: #A6B2BE; --link: #93BCEB; --line: #2E3C49;
+}
+
+*, *::before, *::after { box-sizing: inherit; }
+
+html { scroll-behavior: smooth; scroll-padding-top: calc(4.5rem + env(safe-area-inset-top, 0px)); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- bilíngue ---------- */
+html[data-lang="pt"] body [lang="en"],
+html[data-lang="en"] body [lang="pt"] { display: none !important; }
+
+a { color: var(--link); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--link); outline-offset: 3px; border-radius: 2px; }
+
+code { font-family: var(--typed); font-size: 0.92em; }
+
+/* ---------- barra superior ---------- */
+.topbar {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.85rem clamp(1.25rem, 4vw, 3rem);
+  background: color-mix(in srgb, var(--page) 92%, transparent);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+.brand { font-weight: 700; color: var(--ink); text-decoration: none; margin-right: auto; }
+.topbar nav { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+.topbar nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+.topbar nav a:hover { color: var(--ink); }
+.lang-toggle {
+  font: 700 0.85rem var(--typed);
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--muted);
+  border-radius: 3px;
+  padding: 0.3rem 0.55rem;
+  cursor: pointer;
+}
+.lang-toggle:hover { background: var(--ink); color: var(--page); }
+
+@media (max-width: 720px) {
+  .topbar nav { display: none; }
+}
+
+/* ---------- estrutura ---------- */
+main { padding: 0 clamp(1.25rem, 4vw, 3rem); max-width: 72rem; margin: 0 auto; }
+
+.section { padding: clamp(3.5rem, 8vw, 6rem) 0; border-top: 1px solid var(--line); }
+
+h1, h2, h3 { line-height: 1.2; font-weight: 700; }
+h2 { font-size: clamp(1.75rem, 3.5vw, 2.4rem); margin: 0 0 1.5rem; letter-spacing: -0.01em; }
+h3 { font-size: 1.15rem; margin: 0 0 0.5rem; }
+
+.section-intro { color: var(--muted); max-width: var(--measure); margin: -0.75rem 0 3rem; font-style: italic; }
+
+/* ---------- hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+  padding: clamp(3rem, 9vw, 7rem) 0 clamp(3.5rem, 8vw, 6rem);
+}
+.hero h1 {
+  font-size: clamp(2.6rem, 6.5vw, 4.6rem);
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+}
+.lede { font-size: clamp(1.2rem, 2.1vw, 1.45rem); line-height: 1.5; max-width: 34ch; margin: 0 0 1.25rem; }
+.seeking { color: var(--muted); max-width: 44ch; margin: 0 0 2rem; }
+.hero-links { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 0; }
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  background: var(--ink);
+  color: var(--page);
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+.btn:hover { background: var(--link); color: #fff; }
+.btn-quiet { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+.btn-quiet:hover { background: var(--ink); color: var(--page); }
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; }
+}
+
+/* ---------- a ficha catalográfica ---------- */
+.card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 5.2rem minmax(0, 1fr);
+  gap: 0.25rem 1rem;
+  margin: 0;
+  padding: 1.6rem 1.4rem 2.6rem;
+  min-height: 15rem;
+  background-color: var(--card);
+  color: var(--card-ink);
+  font-family: var(--typed);
+  font-size: 0.95rem;
+  line-height: 1.6rem;
+  /* pauta azul, alinhada à altura da linha */
+  background-image:
+    linear-gradient(var(--rule-red), var(--rule-red)),
+    repeating-linear-gradient(to bottom, transparent 0, transparent calc(1.6rem - 1px), var(--rule-blue) calc(1.6rem - 1px), var(--rule-blue) 1.6rem);
+  background-size: 100% 2px, 100% 100%;
+  background-position: 0 1.05rem, 0 1.6rem;
+  background-repeat: no-repeat, repeat;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 rgba(28, 42, 56, 0.08), 0 10px 24px -14px rgba(28, 42, 56, 0.45);
+}
+.card p { margin: 0; }
+.card strong { font-weight: 700; }
+.card-call { font-weight: 700; padding-top: 1.6rem; }
+.card-call span { display: block; }
+.card-body { padding-top: 1.6rem; }
+.card .indent { text-indent: 2ch; }
+.card .tracings { margin-top: 1.6rem; }
+.card-hole {
+  position: absolute;
+  bottom: 0.7rem;
+  left: 50%;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-left: -0.55rem;
+  border-radius: 50%;
+  background: var(--page);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.card-hero { transform: rotate(-1.4deg); }
+@media (prefers-reduced-motion: no-preference) {
+  .card-hero { animation: file-in 700ms cubic-bezier(.2,.7,.2,1) 150ms both; }
+  @keyframes file-in {
+    from { transform: translateY(-2.5rem) rotate(-1.4deg); opacity: 0; }
+    to   { transform: translateY(0) rotate(-1.4deg); opacity: 1; }
+  }
+}
+
+@media (max-width: 520px) {
+  .card { grid-template-columns: 1fr; font-size: 0.88rem; }
+  .card-call { padding-top: 1.6rem; }
+  .card-body { padding-top: 0; }
+  .card-call span { display: inline; }
+}
+
+/* ---------- forças ---------- */
+.strengths {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem clamp(2rem, 5vw, 4rem);
+}
+.strengths article { border-left: 3px solid var(--rule-red); padding-left: 1.1rem; }
+.strengths p { margin: 0; max-width: 52ch; }
+@media (max-width: 760px) { .strengths { grid-template-columns: 1fr; } }
+
+/* ---------- projetos ---------- */
+.project {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  align-items: start;
+  margin-bottom: clamp(3.5rem, 7vw, 5.5rem);
+}
+.project:last-child { margin-bottom: 0; }
+.project .card { position: sticky; top: calc(5rem + env(safe-area-inset-top, 0px)); }
+.project-text p { margin: 0 0 1rem; max-width: var(--measure); }
+.project-links { display: flex; gap: 1.5rem; flex-wrap: wrap; font-weight: 600; margin-top: 1.25rem !important; }
+.project-note { color: var(--muted); font-style: italic; }
+
+.shot { margin: 1.5rem 0 0; }
+.shot img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+@media (max-width: 860px) {
+  .project { grid-template-columns: 1fr; }
+  .project .card { position: relative; top: 0; }
+}
+
+/* ---------- trajetória ---------- */
+.background {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem clamp(2rem, 5vw, 4rem);
+}
+.background h3 { margin-top: 2rem; }
+.background > div > h3:first-child { margin-top: 0; }
+dl { margin: 0; }
+dt { font-weight: 700; margin-top: 1rem; }
+dt:first-child { margin-top: 0; }
+dd { margin: 0.15rem 0 0; color: var(--muted); max-width: 52ch; }
+.tools { max-width: 52ch; }
+@media (max-width: 760px) { .background { grid-template-columns: 1fr; } }
+
+/* ---------- contato ---------- */
+.contact p { font-size: 1.2rem; max-width: 46ch; }
+.contact-list { list-style: none; padding: 0; margin: 1.5rem 0 0; display: flex; gap: 1.75rem; flex-wrap: wrap; font-weight: 600; font-size: 1.1rem; }
+
+/* ---------- rodapé ---------- */
+.footer {
+  padding: 2rem clamp(1.25rem, 4vw, 3rem) 2.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+.footer p { margin: 0; }

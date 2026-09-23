@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lidiane M. Gomes — Dados e Informação</title>
+<meta name="description" content="Bibliotecária há 16 anos em transição para Engenharia, Governança e Qualidade de Dados. Projetos, trajetória e contato.">
+<meta property="og:title" content="Lidiane M. Gomes — Dados e Informação">
+<meta property="og:description" content="Da estante ao pipeline: projetos em dados, governança e produto.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📇</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#top">L. M. Gomes</a>
+  <nav aria-label="Seções">
+    <a href="#forcas"><span lang="pt">O que eu trago</span><span lang="en">Strengths</span></a>
+    <a href="#projetos"><span lang="pt">Projetos</span><span lang="en">Projects</span></a>
+    <a href="#trajetoria"><span lang="pt">Trajetória</span><span lang="en">Background</span></a>
+    <a href="#contato"><span lang="pt">Contato</span><span lang="en">Contact</span></a>
+  </nav>
+  <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch to English">EN</button>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Lidiane M. Gomes</h1>
+      <p class="lede" lang="pt">Passei dezesseis anos organizando informação em bibliotecas. Agora organizo dados — com o mesmo cuidado com origem, classificação e qualidade.</p>
+      <p class="lede" lang="en">I spent sixteen years organizing information in libraries. Now I organize data — with the same care for provenance, classification and quality.</p>
+      <p class="seeking" lang="pt">Busco estágio em Engenharia de Dados, Governança e Qualidade de Dados. Porto Alegre, RS · aberta a remoto.</p>
+      <p class="seeking" lang="en">Looking for an internship in Data Engineering, Data Governance and Data Quality. Porto Alegre, Brazil · open to remote.</p>
+      <p class="hero-links">
+        <a class="btn" href="#projetos"><span lang="pt">Ver projetos</span><span lang="en">See projects</span></a>
+        <a class="btn btn-quiet" href="mailto:lidigomes@gmail.com"><span lang="pt">Escrever para mim</span><span lang="en">Email me</span></a>
+      </p>
+    </div>
+
+    <!-- A ficha catalográfica é o elemento-assinatura do site -->
+    <figure class="card card-hero" aria-label="Ficha catalográfica de Lidiane M. Gomes">
+      <div class="card-call"><span>020</span> <span>G633d</span></div>
+      <div class="card-body">
+        <p>Gomes, Lidiane M.</p>
+        <p class="indent" lang="pt">Da estante ao pipeline : uma bibliotecária em transição para dados / Lidiane M. Gomes. — Porto Alegre, 2009– .</p>
+        <p class="indent" lang="en">From shelf to pipeline : a librarian moving into data / Lidiane M. Gomes. — Porto Alegre, 2009– .</p>
+        <p class="indent" lang="pt">16 anos de carreira : Python, SQL, ETL ; inglês C1.</p>
+        <p class="indent" lang="en">16-year career : Python, SQL, ETL ; English C1.</p>
+        <p class="indent tracings" lang="pt">1. Governança de dados. 2. Engenharia de dados. 3. Metadados. 4. Qualidade de dados. 5. Biblioteconomia. I. Título.</p>
+        <p class="indent tracings" lang="en">1. Data governance. 2. Data engineering. 3. Metadata. 4. Data quality. 5. Library science. I. Title.</p>
+      </div>
+      <span class="card-hole" aria-hidden="true"></span>
+    </figure>
+  </section>
+
+  <!-- ============ FORÇAS ============ -->
+  <section id="forcas" class="section">
+    <h2><span lang="pt">O que eu trago</span><span lang="en">What I bring</span></h2>
+
+    <div class="strengths">
+      <article>
+        <h3 lang="pt">Metadados e classificação são governança</h3>
+        <h3 lang="en">Metadata and classification are governance</h3>
+        <p lang="pt">Integrei a comissão que revisou o vocabulário controlado de um portal nacional, saneando inconsistências e duplicidades, e padronizei termos de indexação numa rede de bibliotecas. Dicionário de dados, catálogo e linhagem são o mesmo problema com outras ferramentas.</p>
+        <p lang="en">I served on the committee that reviewed a national portal's controlled vocabulary, cleaning up inconsistencies and duplicates, and standardized indexing terms across a library network. Data dictionaries, catalogs and lineage are the same problem with different tools.</p>
+      </article>
+      <article>
+        <h3 lang="pt">Qualidade de dados como hábito</h3>
+        <h3 lang="en">Data quality as a habit</h3>
+        <p lang="pt">Nos meus projetos, a regra de negócio vem antes da tela: detecção de duplicatas por título normalizado, notas só inteiras, posições que não se repetem, proteção contra injeção de fórmula em planilha.</p>
+        <p lang="en">In my projects, business rules come before screens: duplicate detection through normalized titles, integer-only scores, rankings that can't repeat, protection against spreadsheet formula injection.</p>
+      </article>
+      <article>
+        <h3 lang="pt">Produto de ponta a ponta, com IA</h3>
+        <h3 lang="en">End-to-end product work, with AI</h3>
+        <p lang="pt">Conduzo produtos inteiros usando o Claude (Anthropic) como parceiro de execução técnica: eu defino escopo, regras e modelo de dados, converso com quem vai usar, testo, leio logs e faço o deploy. O código é escrito pela IA — e eu digo isso abertamente.</p>
+        <p lang="en">I lead whole products using Claude (Anthropic) as my technical execution partner: I define scope, rules and data model, talk to the people who'll use it, test, read logs and deploy. The code is written by the AI — and I say so openly.</p>
+      </article>
+      <article>
+        <h3 lang="pt">Escrever para ser entendida</h3>
+        <h3 lang="en">Writing to be understood</h3>
+        <p lang="pt">Por três anos revisei respostas técnicas publicadas para micro e pequenos empresários, traduzindo o complexo para linguagem simples. Trabalho em português e inglês (C1) e já entreguei formulários em três idiomas.</p>
+        <p lang="en">For three years I reviewed technical answers published for small business owners, turning complex content into plain language. I work in Portuguese and English (C1) and have shipped forms in three languages.</p>
+      </article>
+      <article>
+        <h3 lang="pt">Medir para melhorar</h3>
+        <h3 lang="en">Measuring to improve</h3>
+        <p lang="pt">Na Santa Casa, liderei a equipe que implantou métricas de desempenho e acompanhou os atendimentos anuais passarem de 8.000 para 11.500 em três anos (+43%). O setor recebeu o Prêmio Destaque em Gestão em 2019.</p>
+        <p lang="en">At Santa Casa hospital, I led the team that introduced performance metrics and tracked annual service requests grow from 8,000 to 11,500 in three years (+43%). The unit won the hospital's Management Highlight Award in 2019.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ PROJETOS ============ -->
+  <section id="projetos" class="section">
+    <h2><span lang="pt">Projetos</span><span lang="en">Projects</span></h2>
+    <p class="section-intro" lang="pt">Cada projeto tem sua ficha: número de chamada, descrição e, no rodapé, os assuntos — aqui, as tecnologias.</p>
+    <p class="section-intro" lang="en">Each project has its own catalog card: call number, description and, at the bottom, the subject headings — here, the tech stack.</p>
+
+    <!-- ---------- Projeto 1: Eventos Medievais ---------- -->
+    <article class="project">
+      <div class="card">
+        <div class="card-call"><span>025.04</span> <span>G633e</span></div>
+        <div class="card-body">
+          <p><strong>Eventos Medievais</strong> : catálogo de feiras e torneios medievais. — 2026.</p>
+          <p class="indent" lang="pt">Site, app Android e painel de curadoria sobre o mesmo banco de dados, com diretório de expositores. Em PT, EN e ES.</p>
+          <p class="indent" lang="en">Website, Android app and curation panel on a single database, plus an exhibitor directory. In PT, EN and ES.</p>
+          <p class="indent tracings">1. Firebase Firestore. 2. Firebase Hosting. 3. Kotlin. 4. GA4. 5. OpenStreetMap.</p>
+        </div>
+        <span class="card-hole" aria-hidden="true"></span>
+      </div>
+
+      <div class="project-text">
+        <p lang="pt"><strong>O problema.</strong> As datas de eventos medievais ficam espalhadas em perfis de Instagram e páginas soltas. Quem frequenta não tem um lugar só para consultar, e quem organiza não tem onde divulgar.</p>
+        <p lang="en"><strong>The problem.</strong> Medieval event dates are scattered across Instagram profiles and loose pages. Attendees have no single place to look, and organizers have nowhere to announce.</p>
+
+        <p lang="pt"><strong>O que eu fiz.</strong> Desenhei o fluxo de curadoria: organizadores enviam o evento por formulário, que entra como <em>pendente</em> e só é publicado depois da minha aprovação (<em>aprovado</em>, <em>rejeitado</em> ou <em>mesclado</em>, quando é duplicata). Defini o modelo de dados — incluindo <code>serie_id</code> para ligar edições do mesmo evento, <code>titulo_normalizado</code> para achar duplicatas e histórico preservado em vez de apagar eventos passados. Cuidei da política de privacidade, das métricas de uso e das escolhas de custo zero.</p>
+        <p lang="en"><strong>What I did.</strong> I designed the curation workflow: organizers submit events through a form, entries land as <em>pending</em> and are only published after my review (<em>approved</em>, <em>rejected</em> or <em>merged</em> when duplicated). I defined the data model — including a <code>serie_id</code> linking editions of the same event, a <code>titulo_normalizado</code> field for duplicate detection, and preserved history instead of deleting past events. I handled the privacy policy, usage analytics and zero-cost choices.</p>
+
+        <p lang="pt"><strong>O que isso mostra.</strong> Governança na prática: um dono para cada dado, um ciclo de vida com status explícitos, controle de duplicatas e dados pessoais (e-mail do organizador) fora da vista pública.</p>
+        <p lang="en"><strong>What it shows.</strong> Governance in practice: an owner for every record, an explicit status lifecycle, duplicate control and personal data (organizer email) kept out of public view.</p>
+
+        <figure class="shot">
+          <img src="assets/eventos-medievais.png" alt="Tela do site Eventos Medievais com a lista de eventos filtrada por região" loading="lazy" onerror="this.closest('figure').hidden=true">
+        </figure>
+
+        <p class="project-links">
+          <a href="https://eventos-medievais.web.app/"><span lang="pt">Ver o site no ar</span><span lang="en">Visit the live site</span></a>
+          <a href="https://github.com/LidiMG/Eventos-Medievais"><span lang="pt">Repositório</span><span lang="en">Repository</span></a>
+        </p>
+      </div>
+    </article>
+
+    <!-- ---------- Projeto 2: Aço & Folha ---------- -->
+    <article class="project">
+      <div class="card">
+        <div class="card-call"><span>005.74</span> <span>G633a</span></div>
+        <div class="card-body">
+          <p><strong>Aço &amp; Folha</strong> : sistema de gestão de um evento medieval. — 2026.</p>
+          <p class="indent" lang="pt">App web instalável (PWA) para vendas, torneios e resultados, alimentando uma única planilha.</p>
+          <p class="indent" lang="en">Installable web app (PWA) for sales, tournaments and results, feeding one single spreadsheet.</p>
+          <p class="indent tracings">1. Python. 2. Flask. 3. Google Sheets API. 4. Google Drive API. 5. OAuth. 6. Render.</p>
+        </div>
+        <span class="card-hole" aria-hidden="true"></span>
+      </div>
+
+      <div class="project-text">
+        <p lang="pt"><strong>O problema.</strong> A organização do evento precisava registrar compras de atividades, lançar notas de quatro torneios e publicar resultados — com uma equipe pequena, pelo celular, várias pessoas ao mesmo tempo e sem custo.</p>
+        <p lang="en"><strong>The problem.</strong> The event team needed to record activity purchases, score four tournaments and publish results — with a small crew, on their phones, several people at once, at no cost.</p>
+
+        <p lang="pt"><strong>O que eu fiz.</strong> Levantei os requisitos com os organizadores e transformei cada pedido em regra: preço calculado sozinho, uma linha por competidor quando várias inscrições entram na mesma compra, notas só inteiras, posições de ranking sem repetição, Top 3 calculado automaticamente. Modelei a planilha mestra em abas por atividade. Nos testes, encontrei uma falha real de injeção de fórmula e, lendo os logs do servidor, a causa de um erro 500 (chamada de rede sem tempo-limite). Decidi também o que cada pessoa vê: o telefone dos competidores não aparece para instrutores.</p>
+        <p lang="en"><strong>What I did.</strong> I gathered requirements with the organizers and turned each request into a rule: automatic pricing, one row per competitor when several entries share a purchase, integer-only scores, non-repeating rankings, automatic Top 3. I modeled the master spreadsheet as one tab per activity. While testing, I found a real formula-injection flaw and, by reading server logs, the cause of a 500 error (a network call with no timeout). I also decided who sees what: competitors' phone numbers are hidden from instructors.</p>
+
+        <p lang="pt">Além de conduzir o app, coorganizo o próprio evento, que cresce a cada edição, com escopo, prazos e responsáveis geridos no Notion.</p>
+        <p lang="pt"><strong>O que isso mostra.</strong> Ingestão com validação na entrada, dados derivados (rankings) calculados a partir de uma fonte única, controle de acesso por papel e investigação de incidente em produção.</p>
+        <p lang="en">Besides leading the app, I co-organize the event itself, which grows with every edition, with scope, deadlines and owners managed in Notion.</p>
+        <p lang="en"><strong>What it shows.</strong> Validated ingestion, derived data (rankings) computed from a single source of truth, role-based access and production incident investigation.</p>
+
+        <figure class="shot">
+          <img src="assets/aco-e-folha.png" alt="Tela inicial do app Aço & Folha com os três modos: Aquisições, Competições e Resultados" loading="lazy" onerror="this.closest('figure').hidden=true">
+        </figure>
+
+        <p class="project-links">
+          <a href="https://github.com/LidiMG/Aco-e-Folha"><span lang="pt">Repositório</span><span lang="en">Repository</span></a>
+        </p>
+      </div>
+    </article>
+
+    <!-- ---------- Projeto 3: Auditoria de referências ---------- -->
+    <article class="project">
+      <div class="card">
+        <div class="card-call"><span>025.3</span> <span>G633r</span></div>
+        <div class="card-body">
+          <p><strong lang="pt">Auditoria de referências bibliográficas</strong><strong lang="en">Bibliographic reference audit</strong> <span lang="pt">: script de conferência de citações. — 2017–2025.</span><span lang="en">: citation-checking script. — 2017–2025.</span></p>
+          <p class="indent" lang="pt">Compara referências em APA, ABNT e Vancouver com pontuação ponderada.</p>
+          <p class="indent" lang="en">Matches references across APA, ABNT and Vancouver with weighted scoring.</p>
+          <p class="indent tracings" lang="pt">1. Python. 2. Correspondência de registros. 3. Qualidade de dados.</p>
+          <p class="indent tracings" lang="en">1. Python. 2. Record linkage. 3. Data quality.</p>
+        </div>
+        <span class="card-hole" aria-hidden="true"></span>
+      </div>
+
+      <div class="project-text">
+        <p lang="pt">Um problema clássico de biblioteca resolvido como problema de dados: decidir se duas referências escritas em normas diferentes descrevem a mesma obra. A pontuação é ponderada por campo, a correspondência de autor é obrigatória e o ano aceita tolerância de ±1 — é o mesmo raciocínio da deduplicação e do <em>record linkage</em>.</p>
+        <p lang="en">A classic library problem solved as a data problem: deciding whether two references written in different styles describe the same work. Scoring is weighted by field, author match is mandatory and the year tolerates ±1 — the same reasoning behind deduplication and record linkage.</p>
+        <p lang="pt">Nasceu do meu trabalho de consultoria na +A Educação, onde também implantei busca semântica nos repositórios próprios para comparar fontes na hora e garantir consistência total entre citações e referências.</p>
+        <p lang="en">It grew out of my consultancy work at +A Educação, where I also set up semantic search over in-house repositories to compare sources instantly and keep citations and references fully consistent.</p>
+        <p class="project-note" lang="pt">Repositório privado, por conter informações confidenciais. Posso demonstrar o funcionamento em entrevista.</p>
+        <p class="project-note" lang="en">Private repository, as it contains confidential information. Happy to demo how it works in an interview.</p>
+      </div>
+    </article>
+
+    <!-- ---------- Projeto 4: Análise GAPD ---------- -->
+    <article class="project">
+      <div class="card">
+        <div class="card-call"><span>001.422</span> <span>G633g</span></div>
+        <div class="card-body">
+          <p><strong lang="pt">Políticas globais de aborto</strong><strong lang="en">Global abortion policies</strong> <span lang="pt">: análise de dados da OMS. — 2024.</span><span lang="en">: analysis of WHO data. — 2024.</span></p>
+          <p class="indent" lang="pt">Projeto final do bootcamp {reprograma}, sobre o banco GAPD da Organização Mundial da Saúde.</p>
+          <p class="indent" lang="en">Final project for the {reprograma} bootcamp, using the World Health Organization's GAPD database.</p>
+          <p class="indent tracings" lang="pt">1. Python. 2. Pandas. 3. Análise exploratória.</p>
+          <p class="indent tracings" lang="en">1. Python. 2. Pandas. 3. Exploratory analysis.</p>
+        </div>
+        <span class="card-hole" aria-hidden="true"></span>
+      </div>
+
+      <div class="project-text">
+        <p lang="pt">Recorte de um questionário de 30 perguntas para entender barreiras legais ao aborto seguro em diferentes países: permissão a pedido da mulher, fundamentos legais, restrições adicionais e quem pode ser responsabilizado criminalmente.</p>
+        <p lang="en">A focused cut of a 30-question survey to understand legal barriers to safe abortion across countries: permission on request, legal grounds, additional restrictions and who can be held criminally liable.</p>
+        <p class="project-links">
+          <a href="https://github.com/LidiMG/reprograma_On33_Projeto_Final"><span lang="pt">Repositório</span><span lang="en">Repository</span></a>
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ TRAJETÓRIA ============ -->
+  <section id="trajetoria" class="section">
+    <h2><span lang="pt">Trajetória</span><span lang="en">Background</span></h2>
+
+    <div class="background">
+      <div>
+        <h3 lang="pt">Experiência</h3>
+        <h3 lang="en">Experience</h3>
+        <dl>
+          <dt>+A Educação</dt>
+          <dd lang="pt">Consultoria técnica em padronização de conteúdo e inteligência documental · dez. 2017 – dez. 2025</dd>
+          <dd lang="en">Technical consultant, content standardization and documentary intelligence · Dec 2017 – Dec 2025</dd>
+          <dd lang="pt">Auditoria automatizada de referências com IA generativa, busca semântica em repositórios, normalização ABNT/APA e verificação de fontes.</dd>
+          <dd lang="en">AI-assisted automated reference auditing, semantic search over repositories, ABNT/APA standardization and source verification.</dd>
+
+          <dt>Santa Casa de Misericórdia de Porto Alegre</dt>
+          <dd lang="pt">Bibliotecária · jan. 2016 – nov. 2020</dd>
+          <dd lang="en">Librarian · Jan 2016 – Nov 2020</dd>
+          <dd lang="pt">Liderança da equipe e coordenação das bibliotecas científica e cultural do complexo hospitalar. Atendimentos anuais de 8.000 para 11.500 (+43%) e Prêmio Destaque em Gestão, 2019.</dd>
+          <dd lang="en">Led the team and coordinated the hospital complex's scientific and cultural libraries. Annual service requests up from 8,000 to 11,500 (+43%); Management Highlight Award, 2019.</dd>
+
+          <dt>SENAI-RS / FIERGS</dt>
+          <dd lang="pt">Bibliotecária · jul. 2014 – mai. 2015</dd>
+          <dd lang="en">Librarian · Jul 2014 – May 2015</dd>
+          <dd lang="pt">Padronização de termos de indexação na rede de bibliotecas, pesquisa patentária e conformidade documental com as diretrizes do Departamento Nacional.</dd>
+          <dd lang="en">Standardized indexing terms across the library network; patent research and documentary compliance with national guidelines.</dd>
+
+          <dt>SESC-RS</dt>
+          <dd lang="pt">Bibliotecária temporária · set. – dez. 2013</dd>
+          <dd lang="en">Temporary librarian · Sep – Dec 2013</dd>
+          <dd lang="pt">Planilhas de controle de demanda e remessa de acervo para as unidades do estado, com dupla conferência de lotes para eliminar erros de triagem.</dd>
+          <dd lang="en">Built demand and shipping control spreadsheets for statewide collection distribution, with double-checking of batches to eliminate sorting errors.</dd>
+
+          <dt lang="pt">SENAI-RS / FIERGS — Projeto SBRT</dt>
+          <dt lang="en">SENAI-RS / FIERGS — SBRT project</dt>
+          <dd lang="pt">Bolsista de iniciação científica · ago. 2010 – jul. 2013</dd>
+          <dd lang="en">Undergraduate research fellow · Aug 2010 – Jul 2013</dd>
+          <dd lang="pt">Revisão final (QA) das respostas técnicas do Serviço Brasileiro de Respostas Técnicas e comissão de revisão do vocabulário controlado do portal.</dd>
+          <dd lang="en">Final quality review of the Brazilian Technical Answers Service publications; member of the portal's controlled vocabulary review committee.</dd>
+
+          <dt lang="pt">Estágios em Biblioteconomia</dt>
+          <dt lang="en">Library Science internships</dt>
+          <dd lang="pt">UFRGS (2006–2009) e Control Consultoria em Informação e Documentação (2008), onde levantei requisitos para um sistema de indexação de imagens e operei bases de dados da família ISIS.</dd>
+          <dd lang="en">UFRGS (2006–2009) and Control Consultoria (2008), where I gathered requirements for an image indexing system and ran ISIS-family databases.</dd>
+        </dl>
+      </div>
+
+      <div>
+        <h3 lang="pt">Formação</h3>
+        <h3 lang="en">Education</h3>
+        <dl>
+          <dt lang="pt">Tecnólogo em Banco de Dados — Wyden</dt>
+          <dt lang="en">Database Technology degree — Wyden</dt>
+          <dd lang="pt">mar. 2026 – jul. 2029 (em andamento)</dd>
+          <dd lang="en">Mar 2026 – Jul 2029 (in progress)</dd>
+
+          <dt lang="pt">Análise de Dados com Python — {reprograma}</dt>
+          <dt lang="en">Data Analysis with Python — {reprograma}</dt>
+          <dd lang="pt">mai. – out. 2024</dd>
+          <dd lang="en">May – Oct 2024</dd>
+
+          <dt lang="pt">Biblioteconomia — UFRGS</dt>
+          <dt lang="en">Library Science — UFRGS</dt>
+          <dd lang="pt">2005 – 2009. Monografia sobre o filme como informação que precisa ser catalogada, a partir da teoria da leitura de Umberto Eco.</dd>
+          <dd lang="en">2005 – 2009. Thesis on film as information that needs cataloging, drawing on Umberto Eco's theory of reading.</dd>
+
+          <dt lang="pt">Outros bootcamps</dt>
+          <dt lang="en">Other bootcamps</dt>
+          <dd>Data Girls, PrograMaria, Elas+ Tech.</dd>
+        </dl>
+
+        <h3 lang="pt">Certificações</h3>
+        <h3 lang="en">Certifications</h3>
+        <p lang="pt">Extração e Manipulação de Dados com Python · Excel para Análise de Dados · Scrum e Kanban · Curso Geral de Propriedade Intelectual · Liderança Feminina</p>
+        <p lang="en">Data Extraction and Manipulation with Python · Excel for Data Analysis · Scrum and Kanban · General Course on Intellectual Property · Women's Leadership</p>
+
+        <h3 lang="pt">Ferramentas</h3>
+        <h3 lang="en">Tools</h3>
+        <p class="tools">Python (Pandas, NumPy, Playwright, psycopg2) · SQL · PostgreSQL · ETL · Flask · Firebase · Google APIs · Tableau · Looker · Notion · Git</p>
+
+        <h3 lang="pt">Idiomas</h3>
+        <h3 lang="en">Languages</h3>
+        <p lang="pt">Português (nativo), inglês C1 (EnglishScore, British Council, julho de 2026), espanhol e Libras (básico).</p>
+        <p lang="en">Portuguese (native), English C1 (EnglishScore, British Council, July 2026), Spanish and Brazilian Sign Language (basic).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTATO ============ -->
+  <section id="contato" class="section contact">
+    <h2><span lang="pt">Vamos conversar</span><span lang="en">Let's talk</span></h2>
+    <p lang="pt">Se a sua equipe cuida de dados e precisa de alguém que pergunte de onde eles vêm, o que significam e se dá para confiar neles, escreva.</p>
+    <p lang="en">If your team works with data and needs someone who asks where it comes from, what it means and whether it can be trusted, get in touch.</p>
+    <ul class="contact-list">
+      <li><a href="mailto:lidigomes@gmail.com">lidigomes@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/lidianemgomes/">LinkedIn</a></li>
+      <li><a href="https://github.com/LidiMG">GitHub</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="footer">
+  <p lang="pt">Site construído com auxílio de IA (Claude, da Anthropic). Conteúdo, decisões e revisão: Lidiane M. Gomes.</p>
+  <p lang="en">Site built with AI assistance (Claude, by Anthropic). Content, decisions and review: Lidiane M. Gomes.</p>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById('langToggle');
+
+  function apply(lang) {
+    root.setAttribute('data-lang', lang);
+    root.setAttribute('lang', lang === 'pt' ? 'pt-BR' : 'en');
+    btn.textContent = lang === 'pt' ? 'EN' : 'PT';
+    btn.setAttribute('aria-label', lang === 'pt' ? 'Switch to English' : 'Mudar para português');
+  }
+
+  var saved = null;
+  try { saved = localStorage.getItem('lang'); } catch (e) {}
+  var initial = saved || ((navigator.language || 'pt').toLowerCase().indexOf('pt') === 0 ? 'pt' : 'en');
+  apply(initial);
+
+  btn.addEventListener('click', function () {
+    var next = root.getAttribute('data-lang') === 'pt' ? 'en' : 'pt';
+    apply(next);
+    try { localStorage.setItem('lang', next); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>

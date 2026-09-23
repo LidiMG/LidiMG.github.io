@@ -1,0 +1,4 @@
+Coloque aqui as capturas de tela dos projetos, com estes nomes:
+  eventos-medievais.png
+  aco-e-folha.png
+Largura sugerida: 1200 a 1600 px. Use só dados fictícios ou anonimizados.
