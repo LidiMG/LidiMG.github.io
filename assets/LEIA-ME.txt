@@ -1,4 +1,10 @@
-Coloque aqui as capturas de tela dos projetos, com estes nomes:
+Eventos Medievais — captura de tela:
   eventos-medievais.png
-  aco-e-folha.png
-Largura sugerida: 1200 a 1600 px. Use só dados fictícios ou anonimizados.
+  Largura sugerida: 1200 a 1600 px.
+
+Aço & Folha — vídeo curto (menos de 6 MB):
+  aco-e-folha.mp4
+  Opcional, capa antes do play: aco-e-folha-poster.jpg
+  15–30 segundos, 1280 px de largura já é suficiente.
+
+Em ambos, use só dados fictícios ou anonimizados.

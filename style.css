@@ -9,10 +9,10 @@
   --ink: #1C2A38;         /* tinta azul-marinho */
   --muted: #4E5C69;
   --link: #1D4F8A;
-  --card: #FFFEF7;        /* cartolina da ficha */
+  --card: #E8D9B5;        /* cartolina da ficha — sépia envelhecido */
   --card-ink: #22262B;
   --rule-red: #B0272B;    /* linha vermelha do topo da ficha */
-  --rule-blue: #B7CBE2;   /* pauta azul */
+  --rule-line: #A9CBA4;   /* pauta verde, estilo papel contínuo de dados ("greenbar") */
   --line: #C4CDC8;
 
   --serif: "Literata", "Iowan Old Style", Georgia, "Times New Roman", serif;
@@ -26,16 +26,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --page: #15202A;
-    --ink: #E4E9EE;
-    --muted: #A6B2BE;
-    --link: #93BCEB;
-    --line: #2E3C49;
+    --page: #1E1730;
+    --ink: #E9E5F3;
+    --muted: #B3A9C7;
+    --link: #B0A0E8;
+    --line: #372B4D;
     /* a ficha continua clara: é um objeto físico */
   }
 }
 :root[data-theme="dark"] {
-  --page: #15202A; --ink: #E4E9EE; --muted: #A6B2BE; --link: #93BCEB; --line: #2E3C49;
+  --page: #1E1730; --ink: #E9E5F3; --muted: #B3A9C7; --link: #B0A0E8; --line: #372B4D;
 }
 
 *, *::before, *::after { box-sizing: inherit; }
@@ -159,7 +159,7 @@ h3 { font-size: 1.15rem; margin: 0 0 0.5rem; }
   /* pauta azul, alinhada à altura da linha */
   background-image:
     linear-gradient(var(--rule-red), var(--rule-red)),
-    repeating-linear-gradient(to bottom, transparent 0, transparent calc(1.6rem - 1px), var(--rule-blue) calc(1.6rem - 1px), var(--rule-blue) 1.6rem);
+    repeating-linear-gradient(to bottom, transparent 0, transparent calc(1.6rem - 1px), var(--rule-line) calc(1.6rem - 1px), var(--rule-line) 1.6rem);
   background-size: 100% 2px, 100% 100%;
   background-position: 0 1.05rem, 0 1.6rem;
   background-repeat: no-repeat, repeat;
@@ -226,12 +226,14 @@ h3 { font-size: 1.15rem; margin: 0 0 0.5rem; }
 .project-note { color: var(--muted); font-style: italic; }
 
 .shot { margin: 1.5rem 0 0; }
-.shot img {
+.shot img,
+.shot video {
   display: block;
   max-width: 100%;
   height: auto;
   border: 1px solid var(--line);
   border-radius: 4px;
+  background: #000;
 }
 
 @media (max-width: 860px) {
