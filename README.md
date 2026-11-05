@@ -33,10 +33,13 @@ Sem framework e sem etapa de build: o GitHub Pages publica os arquivos como est�
   Ao mudar um, mude o outro. O botão PT/EN no topo alterna entre eles.
 - **Novo projeto:** copie um bloco `<article class="project">…</article>` inteiro
   e troque o conteúdo.
-- **Capturas de tela:** salve em `assets/` com o nome já usado no HTML
-  (`eventos-medievais.png`, `aco-e-folha.png`). Se o arquivo não existir,
-  o espaço simplesmente não aparece.
-- **Pendências** estão marcadas no HTML com `TODO`.
+- **Mídias dos projetos:** salve em `assets/` com o nome já usado no HTML —
+  `eventos-medievais.png` (captura de tela, que é um link para o site no ar) e
+  `aco-e-folha.mp4` (vídeo curto, com dados fictícios). O GitHub Pages diferencia
+  maiúsculas de minúsculas, então os nomes precisam ser exatamente esses. Se o
+  arquivo não existir, o espaço simplesmente não aparece.
+- **Links externos** abrem em nova aba (`target="_blank" rel="noopener noreferrer"`);
+  o menu e os e-mails continuam na mesma aba.
 
 ## Publicação
 

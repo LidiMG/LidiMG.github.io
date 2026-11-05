@@ -222,7 +222,7 @@ h3 { font-size: 1.15rem; margin: 0 0 0.5rem; }
 .project:last-child { margin-bottom: 0; }
 .project .card { position: sticky; top: calc(5rem + env(safe-area-inset-top, 0px)); }
 .project-text p { margin: 0 0 1rem; max-width: var(--measure); }
-.project-links { display: flex; gap: 1.5rem; flex-wrap: wrap; font-weight: 600; margin-top: 1.25rem !important; }
+.project-links { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; font-weight: 600; margin-top: 1.25rem !important; }
 .project-note { color: var(--muted); font-style: italic; }
 
 .shot { margin: 1.5rem 0 0; max-width: 22rem; }
@@ -233,6 +233,20 @@ h3 { font-size: 1.15rem; margin: 0 0 0.5rem; }
   border: 1px solid var(--line);
   border-radius: 4px;
 }
+.shot a { position: relative; display: block; }
+.shot a:hover img { border-color: var(--link); }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .shot-video {
   display: block;
   width: 100%;
